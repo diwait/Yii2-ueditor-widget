@@ -2,6 +2,7 @@
     "name": "diwait/ueditor",
     "description": "Yii2's widget",
     "license": "MIT",
+    "version": "1.0",
     "authors": [
         {
             "name": "Diwait",
