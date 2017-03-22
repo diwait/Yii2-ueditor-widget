@@ -1,0 +1,18 @@
+{
+    "name": "diwait/ueditor",
+    "description": "desc",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Diwait",
+            "email": "diwazeng@qq.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "dewei\\ueditor\\": ""
+        }
+    }
+}
