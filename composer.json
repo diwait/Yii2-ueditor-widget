@@ -1,6 +1,6 @@
 {
     "name": "diwait/ueditor",
-    "description": "desc",
+    "description": "Yii2's widget",
     "license": "MIT",
     "authors": [
         {
@@ -9,7 +9,9 @@
         }
     ],
     "minimum-stability": "stable",
-    "require": {},
+    "require": {
+        "php": ">=5.4.0"
+    },
     "autoload": {
         "psr-4": {
             "dewei\\ueditor\\": ""
