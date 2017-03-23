@@ -107,7 +107,7 @@ $form->field($model, 'content')->widget('diwait\ueditor\UEditor', [
         ]
     ];
 ```
-百度Ueditor前缀参数请看 http://fex.baidu.com/ueditor/#start-config
+百度Ueditor前端参数请看 http://fex.baidu.com/ueditor/#start-config
 
 第二,在controller中的actions中加入
 ```php
