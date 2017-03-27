@@ -112,6 +112,47 @@ $form->field($model, 'content')->widget('diwait\ueditor\UEditor', [
 第二,在controller中的actions中加入
 ```php
 'upload' => [
-                'class' => 'diwait\ueditor\UEditorAction'
-            ]
+    'class' => 'diwait\ueditor\UEditorAction'
+    'config' => [
+        // 图片保存的根目录(不要以/结尾)
+        'imageRoot' => Yii::getAlias('@frontend') . '/web',
+        // 图片访问的网址(不要以/结尾)
+        'imageUrl' => 'http://www.xxx.com',
+        // 图片保存与命名规则(不要以/结尾), 最后一段为图片的命名规则
+        'imagePathFormat' => '/upload/image/{yyyy}{mm}{dd}/{time}{rand:6}',
+
+        /* 凡涉及到文件保存的规则, 请参加以下 */
+        /* {rand:6} 会替换成随机数,后面的数字是随机数的位数 */
+        /* {time} 会替换成时间戳 */
+        /* {yyyy} 会替换成四位年份 */
+        /* {yy} 会替换成两位年份 */
+        /* {mm} 会替换成两位月份 */
+        /* {dd} 会替换成两位日期 */
+        /* {hh} 会替换成两位小时 */
+        /* {ii} 会替换成两位分钟 */
+        /* {ss} 会替换成两位秒 */
+        /* 非法字符 \ => * ? " < > | */
+
+        // 涂鸦保存的根目录(不要以/结尾)
+        'scrawlRoot' => Yii::getAlias('@frontend') . '/web',
+        // 涂鸦访问的网址(不要以/结尾)
+        'scrawlUrl' => 'http://www.xxx.com',
+        // 涂鸦保存与命名规则(不要以/结尾), 最后一段为图片的命名规则
+        'scrawlPathFormat' => '/upload/scrawl/{yyyy}{mm}{dd}/{time}{rand:6}',
+
+        // 媒体资源保存的根目录(不要以/结尾)
+        'videoRoot' => Yii::getAlias('@frontend') . '/web',
+        // 媒体资源访问的网址(不要以/结尾)
+        'videoUrl' => 'http://www.xxx.com',
+        // 媒体资源保存与命名规则(不要以/结尾), 最后一段为图片的命名规则
+        'videoPathFormat' => '/upload/video/{yyyy}{mm}{dd}/{time}{rand:6}',
+
+        // 附件保存的根目录(不要以/结尾)
+        'fileRoot' => Yii::getAlias('@frontend') . '/web',
+        // 附件访问的网址(不要以/结尾)
+        'fileUrl' => 'http://www.xxx.com',
+        // 附件保存与命名规则(不要以/结尾), 最后一段为图片的命名规则
+        'filePathFormat' => '/upload/file/{yyyy}{mm}{dd}/{time}{rand:6}'
+    ]
+]
 ```
